@@ -40,7 +40,7 @@ $ git_switch_config.py ${confname}
 $ git_switch_config.py perso
 ```
 
-You can eventually add lines like this into your .bashrc:
+You can eventually add lines like this into your **.bashrc**:
 
 ```bash
 alias sgit_perso="${path_to_this}/git_switch_config.py perso"
