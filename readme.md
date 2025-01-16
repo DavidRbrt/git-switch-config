@@ -1,6 +1,6 @@
-# [Git switch config](.)
+Easily switch between git configurations (user, ssh key).
 
-This allows to easily switch between git configurations (user, ssh key) by automatically update **~/.gitconfig** and **~/.ssh/config** files.
+This read your local configuration file to setup **~/.gitconfig** and **~/.ssh/config** files.
 
 ## Prerequisites
 
