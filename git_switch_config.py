@@ -6,6 +6,8 @@ import yaml
 import subprocess
 from _io import TextIOWrapper
 
+# TODO: put this conf in confs.yaml (keep False by default)
+MULTIPLE_CONF_ALLOWED = False
 
 GIT_CONFIG_FILE_PATH = Path.home() / ".gitconfig"
 SSH_CONFIG_FILE_PATH = Path.home() / ".ssh/config"
@@ -58,7 +60,7 @@ def git_switch_config(conf_requested: str):
         if ssh_key is not None:
             ssh_key_path = Path(f"~/.ssh/{Path(ssh_key).name}")
             ssh_config = None
-            if SSH_CONFIG_FILE_PATH.exists():
+            if SSH_CONFIG_FILE_PATH.exists() and MULTIPLE_CONF_ALLOWED:
                 with open(SSH_CONFIG_FILE_PATH, "r") as ssh_config_file:
                     ssh_config = _ssh_config_file_to_dict(ssh_config_file)
             ssh_config_found = False
