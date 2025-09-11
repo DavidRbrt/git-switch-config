@@ -126,11 +126,11 @@ def _command_line_parser():
 
 
 def _print_conf():
-    print(f"* GIT configuration (${GIT_CONFIG_FILE_PATH})\n******************************************************")
+    print(f"* GIT configuration ({GIT_CONFIG_FILE_PATH})\n******************************************************")
     subprocess.run(["cat", GIT_CONFIG_FILE_PATH])
     print("")
 
-    print(f"* SSH configuration (${SSH_CONFIG_FILE_PATH})\n******************************************************")
+    print(f"* SSH configuration ({SSH_CONFIG_FILE_PATH})\n******************************************************")
     subprocess.run(["cat", SSH_CONFIG_FILE_PATH])
     print("")
 
